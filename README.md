@@ -2,6 +2,8 @@
 
 This repository contains examples from the [Rama documentation](https://redplanetlabs.com/docs/~/index.html).
 
+Rama currently only works on macOS or Linux and doesn't work on Windows.
+
 As explained in the docs, you can start a Groovy REPL with:
 
 ```
