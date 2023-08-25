@@ -12,3 +12,5 @@ mvn gplus:shell
 ```
 
 This is a great way to run the examples or experiment.
+
+Please note: you should use Java 17 or below in order to avoid problems running the Groovy REPL.
