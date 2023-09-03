@@ -5,6 +5,13 @@ import com.rpl.rama.module.*;
 import com.rpl.rama.test.*;
 import java.util.*;
 
+/*
+ * This module is from the tutorial before distributed programming and partitioners
+ * are introduced: https://redplanetlabs.com/docs/~/tutorial2.html
+ *
+ * In reality this module would need a call to .hashPartition if deploying with
+ * more than one task.
+ */
 public class PageAnalyticsModule implements RamaModule {
     @Override
     public void define(Setup setup, Topologies topologies) {
