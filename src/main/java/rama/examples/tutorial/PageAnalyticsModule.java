@@ -27,8 +27,13 @@ public class PageAnalyticsModule implements RamaModule {
         s.source("*depot").out("*pageVisit")
                 .each((Map<String, Object> visit) -> visit.get("sessionId"), "*pageVisit").out("*sessionId")
                 .each((Map<String, Object> visit) -> visit.get("path"), "*pageVisit").out("*path")
+                .each((Map<String, Object> visit) -> {
+                  Map ret = new HashMap(visit);
+                  ret.remove("sessionId");
+                  return ret;
+                }, "*pageVisit").out("*thinPageVisit")
                 .compoundAgg("$$pageViewCount", CompoundAgg.map("*path", Agg.count()))
-                .compoundAgg("$$sessionHistory", CompoundAgg.map("*sessionId", Agg.list("*pageVisit")))
+                .compoundAgg("$$sessionHistory", CompoundAgg.map("*sessionId", Agg.list("*thinPageVisit")))
         ;
     }
 
