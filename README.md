@@ -1,6 +1,6 @@
 # rama-examples
 
-This repository contains examples from the [Rama documentation](https://redplanetlabs.com/docs/~/index.html).
+This repository contains examples from the [Rama documentation](https://redplanetlabs.com/docs/~/index.html). To see short, end-to-end, thoroughly commented examples of using Rama check out [rama-demo-gallery](https://github.com/redplanetlabs/rama-demo-gallery).
 
 Rama currently only works on macOS or Linux and doesn't work on Windows.
 
