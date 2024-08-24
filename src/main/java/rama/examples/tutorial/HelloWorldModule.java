@@ -11,7 +11,7 @@ public class HelloWorldModule implements RamaModule {
         setup.declareDepot("*depot", Depot.random());
         StreamTopology s = topologies.stream("s");
         s.source("*depot").out("*data")
-                .each(Ops.PRINTLN, "*data");
+         .each(Ops.PRINTLN, "*data");
     }
 
     public static void main(String[] args) throws Exception {
