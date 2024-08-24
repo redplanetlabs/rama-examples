@@ -9,7 +9,7 @@ public class SimpleWordCountModule implements RamaModule {
     public void define(Setup setup, Topologies topologies) {
         setup.declareDepot("*depot", Depot.random());
 
-        StreamTopology s = topologies.stream("s");
+        StreamTopology s = topologies.stream("wordCountStream");
         s.pstate("$$wordCounts", PState.mapSchema(String.class, Long.class));
 
         s.source("*depot").out("*token")
